@@ -1,0 +1,110 @@
+.Arena {
+    margin: 20px;
+}
+
+.Arena-Content-menu {
+    margin: 20px 10px;
+}
+
+.Arena-stadium {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Arena-Content-text {
+    margin: 10px 2px;
+}
+
+.Arena-stadium-list {
+    margin: 14px 10px;
+}
+
+.Arena-stadium-link {
+    float: right;
+    text-decoration: none;
+    color: #333;
+}
+
+.Arena-avata-img {
+    height: 100px;
+    width: 150px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.Arena-stadium-content {
+    display: flex;
+}
+
+// filter
+.stadium-filter {
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.stadium-filter-text {
+    font-size: 1.4rem;
+    color: #555;
+    margin-right: 12px;
+}
+
+.Arena-stadium-item {
+    list-style: none;
+}
+
+.stadium-filter-btn {
+    min-width: 90px;
+    margin-right: 12px;
+    height: 34px;
+    border: none;
+    background-color: white;
+}
+
+.stadium-filter-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: white;
+    z-index: 1;
+}
+
+.stadium-filter-price:hover .stadium-price-menu {
+    display: block;
+}
+
+.stadium-price {
+    font-size: 1.4rem;
+    z-index: 0;
+}
+
+.stadium-price-menu {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 25px;
+    padding: 8px 12px;
+    border-radius: 2px;
+    background-color: white;
+    list-style: none;
+}
+
+.stadium-price-link {
+    display: block;
+    padding: 4px 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.stadium-price-link:hover {
+    color: gray;
+}
