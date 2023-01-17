@@ -11,13 +11,13 @@
     padding: 20px 0 20px 0;
     border-bottom: 1px solid #dee0e4;
 }
-.login form {
+.login div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 20px;
 }
-.login form label {
+.login div label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,14 +26,14 @@
     background-color: #3274d6;
     color: #ffffff;
 }
-.login form input[type="password"], .login form input[type="text"] {
+.login div input[type="password"], .login div input[type="text"] {
     width: 310px;
     height: 50px;
     border: 1px solid #dee0e4;
     margin-bottom: 20px;
     padding: 0 15px;
 }
-.login form input[type="submit"] {
+.login div button {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
@@ -44,7 +44,7 @@
     color: #ffffff;
     transition: background-color 0.2s;
 }
-.login form input[type="submit"]:hover {
+.login div button:hover {
     background-color: #2868c7;
     transition: background-color 0.2s;
 }

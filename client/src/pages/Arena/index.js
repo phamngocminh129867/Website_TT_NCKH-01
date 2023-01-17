@@ -2,10 +2,14 @@ import classNames from 'classnames/bind';
 import styles from './Arena.module.scss';
 import avata2 from '../../components/assets/image/san-bong-da-mini-the-cuong-2.jpg';
 import { FaAngleDown } from 'react-icons/fa';
+import Cookies from 'js-cookie';
 
 const cx = classNames.bind(styles);
-
 function Arena() {
+    const token = Cookies.get('token');
+    if (token===undefined)  {
+        window.location.href = "http://localhost:3001/login";
+    }
     return (
         <div className={cx('Arena')}>
             <h2 className={cx('Arena-Banner')}>Sân đấu</h2>
