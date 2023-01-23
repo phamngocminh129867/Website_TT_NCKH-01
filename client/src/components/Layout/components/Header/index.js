@@ -33,7 +33,7 @@ function Header() {
                     </ul>
                     <ul className={cx('menu-list')}>
                         <li className={cx('menu-item')}>
-                            <a className={cx('menu-item-link')} href="#a">
+                            <a className={cx('menu-item-link')} href="/register">
                                 Đăng ký
                             </a>
                         </li>

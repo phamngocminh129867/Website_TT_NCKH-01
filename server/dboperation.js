@@ -18,9 +18,9 @@ async function getdata_withQuery() {
       console.log(" mathus-error :" + error);
     }
   }
-  
+
 
 module.exports = {
-  getdata: getdata,
-  getdata_withQuery:getdata_withQuery
+  getdata:getdata,
+  getdata_withQuery:getdata_withQuery,
 };

@@ -1,4 +1,4 @@
-	
+const mssql = require("mssql");
 const config = {
     user: "sa",
     password: "123456minh",
@@ -11,5 +11,5 @@ const config = {
     },
     port: 62307
   };
-  module.exports = config;
-  
+  const pool = new mssql.ConnectionPool(config);
+  module.exports = {config,pool};

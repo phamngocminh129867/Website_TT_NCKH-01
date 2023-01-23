@@ -29,7 +29,7 @@ function Login(){
                             name: nameAdmin.value,   
                             pass: passAdmin.value,
                         };
-                        console.log(obj);
+                        // console.log(obj);
                         async function getUser() {
                             try {
                                 await fetch("http://localhost:3000/getdata_withQuery", {
