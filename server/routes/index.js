@@ -1,11 +1,12 @@
 const { json } = require('express');
 var express = require('express');
-// var jwt = require('jsonwebtoken');
+var jwt = require('jsonwebtoken');
 var router = express.Router();
 const sql = require("../dboperation");
-var config = require("../dbconfig");
-var {pool} = require("../dbconfig");
+// var {config} = require("../dbconfig");
 var mssql = require("mssql");
+var {pool} = require("../dbconfig");
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
@@ -19,37 +20,35 @@ router.get('/testconnect', function(req, res, next) {
 });
 
 
-router.post("/getdata_withQuery", function (req, res, next) {
+router.post("/getdata_withQuery",async  function (req, res, next) {
   const Ac=req.body;
-  // Ac.name =
-  sql.getdata_withQuery()
-  .then((result) => {
-    var Data = result[0][0];
-    // console.log(typeof Data);
-    // res.json(result); 
-    const token = jwt.sign({
-      tk:Data.TK,
-    },'mk'); 
-    // jwt.verify(token
-    if (Data.TK === Ac.name && Data.MK === Ac.pass ){
+  try {
+    await pool.connect();
+    const result = await pool
+      .request()
+      .input("tk", Ac.name)
+      .input("mk",Ac.pass)
+      .query(`
+      SELECT MK AS pass, TK AS tk, Ma_TK AS id
+      FROM   dbo.TaiKhoang
+      WHERE (TK = @tk) AND (MK = @mk)
+      `);
+    const user = result.recordset[0];
+    if (user) {
+      const token = jwt.sign({
+            tk:Ac.name,
+            idUser:user.id,
+          },'mk'); 
       res.json({
         text: "success",
-        token: token,
+        token:token,
       });
-    }else {
-      res.json({
-        text: "fail",
-      });
-    }
-    // console.log(result[0][0]);
-  })
-  .catch((err)=>{
-    console.log(err);
-  }); 
-});
+    } 
+  } catch (error) {
+    res.status(500).json({text: "fail"});
+  }});
 router.post("/getdata_register", async(req, res)=> {
   var dateOfBirth = new Date(req.body.ngaysinh).toLocaleString();
-  const data = req.body;
   try{
     await pool.connect();
     const result = await pool

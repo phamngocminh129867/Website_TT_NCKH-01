@@ -2,9 +2,13 @@ import classNames from "classnames/bind";
 import styles from "./Login.moudule.scss";
 import {FaUserAlt} from "react-icons/fa";
 import {FaLock} from "react-icons/fa";
-// import Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
 const cx = classNames.bind(styles);
 function Register(){
+    const token = Cookies.get('token');
+    if (token!==undefined)  {
+        window.location.href = "http://localhost:3001/login";
+    }
     return <div className={cx('Login')}>
     <div className="login">
         <h1 className={cx('Login-heading')} >Create Account</h1>

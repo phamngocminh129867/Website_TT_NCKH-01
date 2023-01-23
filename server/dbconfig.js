@@ -6,10 +6,15 @@ const config = {
     database: "Website",
     options: {
       trustedconnection: true,
+      trustServerCertificate: true,
       enableArithAbort: true,
       instancename: "",
+    },
+    pool: {
+      idleTimeoutMillis: 300000,
+      max: 100,
     },
     port: 62307
   };
   const pool = new mssql.ConnectionPool(config);
-  module.exports = {config,pool};
+  module.exports = {pool};

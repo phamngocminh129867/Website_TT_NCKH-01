@@ -5,6 +5,10 @@ import {FaLock} from "react-icons/fa";
 import Cookies from 'js-cookie';
 const cx = classNames.bind(styles);
 function Login(){
+    // const token = Cookies.get('token');
+    // if (token !== undefined)  {
+    //     window.location.href = "http://localhost:3001/login";
+    // }
     return <div className={cx('Login')}>
     <div className="login">
         <h1 className={cx('Login-heading')} >Login</h1>
@@ -44,7 +48,7 @@ function Login(){
                                     if (data.text === "success") {
                                         window.location.href = "http://localhost:3001";
                                         alert("Successfully logged in ");
-                                        console.log(data.token);
+                                        // console.log(data.token);
                                         Cookies.set("token",data.token,{
                                             expires:1,
                                         });
