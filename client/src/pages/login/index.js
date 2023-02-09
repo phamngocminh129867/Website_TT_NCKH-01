@@ -5,10 +5,12 @@ import {FaLock} from "react-icons/fa";
 import Cookies from 'js-cookie';
 const cx = classNames.bind(styles);
 function Login(){
-    // const token = Cookies.get('token');
-    // if (token !== undefined)  {
-    //     window.location.href = "http://localhost:3001/login";
-    // }
+    const token = Cookies.get('token');
+    const user = Cookies.get();
+    if (token !== undefined)  {
+        // window.location.href = "http://localhost:3001";
+        console.log(user.idUser);
+    }
     return <div className={cx('Login')}>
     <div className="login">
         <h1 className={cx('Login-heading')} >Login</h1>
@@ -34,6 +36,7 @@ function Login(){
                             pass: passAdmin.value,
                         };
                         // console.log(obj);
+                        // console.log(token);
                         async function getUser() {
                             try {
                                 await fetch("http://localhost:3000/getdata_withQuery", {
