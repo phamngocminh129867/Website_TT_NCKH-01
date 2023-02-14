@@ -1,0 +1,40 @@
+.wrapper{
+    width: 100%;
+    height: var(--default-layout-header-height);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+}
+
+.inner{
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+}
+
+.menu{
+    font-size: 1.8rem;
+    margin: 0px 10px;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.menu-item-link{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-list{
+    display: flex;
+}
+
+.menu-item{
+    margin: 20px 10px;
+    list-style: none;
+}
+
+.menu-item-link:hover{
+    color: aqua;
+    cursor: pointer;
+}

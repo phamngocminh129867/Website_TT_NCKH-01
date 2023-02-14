@@ -1,0 +1,240 @@
+.Arena{
+    margin: 20px;
+}
+
+.Arena-Content-menu{
+    margin: 20px 10px;
+}
+
+.Arena-stadium{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Arena-Content-text{
+    margin: 10px 2px;
+}
+
+.Arena-stadium-list{
+    margin: 14px 10px;
+}
+
+.Arena-stadium-link{
+    float: right;
+    text-decoration: none;
+    color: #333;
+}
+
+.Arena-avata-img{
+    height: 100px;
+    width: 150px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.Arena-stadium-content{
+    display: flex;
+}
+
+// button-add
+.Arena-stadium-add{
+    display: flex;
+}
+.Arena-stadium-btn{
+    height: 30px;
+    width: 80px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.Arena-stadium-text{
+    margin: 7px 2px;
+}
+
+.Arena-stadium-icon{
+    margin: 7px 0;
+}
+
+// filter
+.stadium-filter{
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.stadium-filter-text{
+    font-size: 1.4rem;
+    color: #555;
+    margin-right: 12px;
+}
+
+.Arena-stadium-item{
+    list-style: none;
+}
+
+.stadium-filter-btn{
+    min-width: 90px;
+    margin-right: 12px;
+    height: 34px;
+    border: none;
+    background-color: white;
+}
+
+.stadium-filter-btn:hover{
+    color: #ee4d2d;
+}
+
+.stadium-filter-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-width: 150px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: white;    
+    z-index: 1;
+}
+
+.stadium-filter-price:hover .stadium-price-menu{
+    display: block;
+}
+
+.stadium-price{
+    font-size: 1.4rem;
+    z-index: 0;
+}
+
+.stadium-price-menu{
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 25px;
+    padding: 8px 12px;
+    border-radius: 2px;
+    background-color: white;
+    list-style: none;
+}
+
+.stadium-price-link{
+    display: block;
+    padding: 4px 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.stadium-price-link:hover{
+    color: #ee4d2d;
+}
+
+.stadium-filter-menu{
+    display: flex;
+    margin: 0 4px;
+}
+
+.stadium-filter-stadium{
+    display: flex;
+}
+
+.stadium-filter-sports{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-width: 150px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: white;    
+    z-index: 1;
+    margin: 0 8px;
+}
+
+.stadium-filter-sports:hover .stadium-sports-menu{
+    display: block;
+}
+
+.stadium-sports{
+    font-size: 1.4rem;
+    z-index: 0;
+}
+
+.stadium-sports-menu{
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 25px;
+    padding: 8px 12px;
+    border-radius: 2px;
+    background-color: white;
+    list-style: none;
+}
+
+.stadium-sports-link{
+    display: block;
+    padding: 4px 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.stadium-sports-link:hover{
+    color: #ee4d2d;
+}
+
+
+
+
+.stadium-filter-country{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-width: 150px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: white;    
+    z-index: 1;
+}
+
+.stadium-filter-country:hover .stadium-country-menu{
+    display: block;
+}
+
+.stadium-country{
+    font-size: 1.4rem;
+    z-index: 0;
+}
+
+.stadium-country-menu{
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 25px;
+    padding: 8px 12px;
+    border-radius: 2px;
+    background-color: white;
+    list-style: none;
+}
+
+.stadium-country-link{
+    display: block;
+    padding: 4px 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.stadium-country-link:hover{
+    color: #ee4d2d;
+}

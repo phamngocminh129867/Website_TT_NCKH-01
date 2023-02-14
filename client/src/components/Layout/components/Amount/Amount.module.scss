@@ -1,0 +1,55 @@
+.Amount-add{
+    height: 110px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.Amount-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 20%;
+    margin: 10px 10px;
+}
+
+.Amount-content{
+    margin-top: 10px;
+}
+
+.Amount-button{
+    float: rig ;
+}
+
+.Amount-header{
+    display: flex;
+}
+
+.Amount-footer{
+    display: flex;
+}
+
+.Amount-add-button{
+    background-color: greenyellow;
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+    margin: 8px 4px;
+    border: none;
+}
+
+.Amount-content{
+    width: 100%;
+}
+
+.Amount-button{
+    float: right;
+}
+
+.Amount-close-button{
+    background-color: gray;
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+    margin: 8px 4px;
+    border: none;
+}
